@@ -1,2 +1,11 @@
-$main-color: red;
+$first-color: #0e0e0e;
+$second-color: rgba(161, 138, 104, 1);
 $padding: 1rem;
+
+:root {
+    --font-family: 'DM Sans';
+    --font-size: 16px;
+    --font-style: normal;
+    --font-weight: 400;
+    --line-height: 27px;
+  }

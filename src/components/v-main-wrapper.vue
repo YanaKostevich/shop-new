@@ -2,7 +2,6 @@
   <div class="v-main-wrapper">
     <h2>{{ title }}</h2>
     <v-catalog />
-    <v-cart />
   </div>
 </template>
 

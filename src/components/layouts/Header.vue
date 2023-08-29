@@ -1,66 +1,72 @@
 <template>
-  <div>
-    <header>
-      <div class="header">
-        <div class="logo">MusicMosaic</div>
+  <header>
+    <div class="header">
+      <Logo />
+      <div class="menu-cart">
         <div class="menu-btn">
-          <BurgerMenu right />
+          <Menu />
         </div>
-        <div class="cart">
-          <vCart/>
+        <div class="separator"></div>
+        <div class="cart-search">
+          <div class="search">
+            <vSearch />
+          </div>
         </div>
       </div>
-      <!-- <video
-        class="bg-video"
-        loop=""
-        autoplay="true"
-        muted
-        src="@/assets/video.mp4"
-        type="video/mp4"
-      ></video> -->
-    </header>
-  </div>
+    </div>
+  </header>
 </template>
 
 <script>
-import BurgerMenu from "./BurgerMenu.vue";
-import vCart from "../v-cart.vue";
+import Logo from "../logo.vue";
+import Menu from "../menu.vue";
+import vSearch from "../v-search.vue";
 export default {
   name: "Header",
   components: {
-    BurgerMenu,
-    vCart
+    Logo,
+    Menu,
+    vSearch,
   },
+  computed: {
+  }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 header {
-  padding-top: 50px;
-  width: 80%;
   margin: 0 auto;
   .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 5rem;
+    padding: 5rem 0;
     .logo {
-      font-family: "Quicksand";
-      font-size: 30px;
-      color: antiquewhite;
+      text-align: left;
     }
-    .menu-btn {
+    .menu-cart {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 3rem;
+      .cart-search {
+        display: flex;
+        justify-content: space-between;
+        gap: 2.5rem;
+      }
+      .separator {
+        border: 0.5px solid #707070;
+        width: 1px;
+        &::before {
+          content: "|";
+          height: 100%;
+          color: transparent;
+        }
+      }
     }
   }
 }
-.bg-video {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0%;
-  top: 0%;
-  z-index: -1;
-  object-fit: cover;
-  filter: brightness(50%) blur(2px);
-}
+
 </style>
