@@ -11,6 +11,10 @@
           <div class="search">
             <vSearch />
           </div>
+        
+            <router-link to="/cart" class="cart-icons">
+            <vQuantityCart />
+          </router-link>
         </div>
       </div>
     </div>
@@ -21,15 +25,16 @@
 import Logo from "../logo.vue";
 import Menu from "../menu.vue";
 import vSearch from "../v-search.vue";
+import vQuantityCart from "../v-quantity-cart.vue";
 export default {
   name: "Header",
   components: {
     Logo,
     Menu,
     vSearch,
+    vQuantityCart
   },
-  computed: {
-  }
+  computed: {},
 };
 </script>
 
@@ -68,5 +73,4 @@ header {
     }
   }
 }
-
 </style>

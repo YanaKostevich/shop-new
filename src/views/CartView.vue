@@ -3,7 +3,6 @@
     <Header />
     <v-cart 
       :cart_data="cartData" 
-      v-if="CART.length" 
       />
   </div>
 </template>

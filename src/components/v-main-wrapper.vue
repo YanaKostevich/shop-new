@@ -1,6 +1,7 @@
 <template>
   <div class="v-main-wrapper">
     <h2>{{ title }}</h2>
+
     <v-catalog />
   </div>
 </template>
@@ -11,7 +12,7 @@ import vCatalog from "./v-catalog.vue";
 export default {
   name: "v-main-wrapper",
   components: {
-    vCatalog
+    vCatalog,
   },
   props: {},
   data() {
@@ -22,9 +23,7 @@ export default {
   computed: {},
   methods: {},
   watch: {},
-  mounted() {
-    console.log("Hello mess");
-  },
+  mounted() {},
 };
 </script>
 

@@ -1,12 +1,16 @@
 <template>
   <div class="v-cart">
-  
+    <p v-if="!cart_data.length">Ваша корзина пуста 😔</p>
     <vCartItem
       v-for="(item, index) in cart_data"
       :key="item.article"
       :cart_item_data="item"
       @deleteFromCart="deleteFromCart(index)"
     />
+    <div class="v-cart__total">
+      <p class="total_name">Total:</p>
+      <p>{{ cartTotalCost }}</p>
+    </div>
   </div>
 </template>
 
@@ -16,7 +20,6 @@ import { mapActions } from "vuex";
 export default {
   name: "v-cart",
   components: {
- 
     vCartItem,
   },
   props: {
@@ -30,17 +33,45 @@ export default {
   data() {
     return {};
   },
-  computed: {},
+  computed: {
+    cartTotalCost() {
+      let result = [];
+      for (let item of this.cart_data) {
+        result.push(item.price * item.quantity);
+      }
+      result = result.reduce(function(sum, el){
+        return sum + el;
+      })
+      return result;
+    },
+  },
   methods: {
     ...mapActions(["DELETE_FROM_CART"]),
     deleteFromCart(index) {
       this.DELETE_FROM_CART(index);
     },
-    
   },
   watch: {},
   mounted() {},
 };
 </script>
 
-<style></style>
+<style lang="scss">
+.v-cart {
+  &__total {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    background-color: #dedede;
+    font-size: 20px;
+    .total_name {
+      margin-right: 1rem;
+      font-weight: bold;
+    }
+  }
+}
+</style>

@@ -4,13 +4,13 @@
     <li><router-link to="/blog">Blog</router-link></li>
     <li><router-link to="/our-story">Our Story</router-link></li>
   </ul>
-  <router-link to="/cart" class="cart-icons">
-      <img src="../assets/cart.svg" alt="Cart" />
-    </router-link>
+ 
 </template>
 <script>
 export default {
-  components: {},
+  components: {
+    
+  },
   methods: {},
 };
 </script>
