@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import vCart from "../components/v-cart.vue";
+import vCart from "../components/cart/v-cart.vue";
 import Header from "@/components/layouts/Header.vue";
 import { mapGetters } from "vuex";
 

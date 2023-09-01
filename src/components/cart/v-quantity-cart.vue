@@ -1,6 +1,6 @@
 <template>
     <div class="v-quantity-cart">
-     <div class="test"><img src="../assets/cart.svg" alt="Cart" /> {{ CART.length }}</div>
+     <div class="test"><img src="../../assets/cart.svg" alt="Cart" /> {{ CART.length }}</div>
     </div>
   </template>
   

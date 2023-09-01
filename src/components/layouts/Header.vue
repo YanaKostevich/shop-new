@@ -25,7 +25,7 @@
 import Logo from "../logo.vue";
 import Menu from "../menu.vue";
 import vSearch from "../v-search.vue";
-import vQuantityCart from "../v-quantity-cart.vue";
+import vQuantityCart from "../cart/v-quantity-cart.vue";
 export default {
   name: "Header",
   components: {
