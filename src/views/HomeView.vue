@@ -2,8 +2,8 @@
   <div>
     <Header />
     <div>
-      <vCatalog />
       <Carousel />
+      <vCatalog />
     </div>
   </div>
 </template>

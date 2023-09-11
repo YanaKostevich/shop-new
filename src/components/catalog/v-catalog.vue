@@ -1,6 +1,6 @@
 <template>
   <div class="v-catalog">
-    <h3>Catalog</h3>
+    <h3>Shop The Latest</h3>
     <div class="v-catalog__list">
       <v-catalog-item
         v-for="product in PRODUCTS"
@@ -50,10 +50,9 @@ export default {
 <style lang="scss">
 .v-catalog {
   &__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem 3rem;
   }
 }
 </style>
