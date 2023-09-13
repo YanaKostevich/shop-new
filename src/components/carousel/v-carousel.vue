@@ -11,8 +11,15 @@
         :imageSlide="false"
       />
     </div>
-    <button @click="prevSlide">Prev</button>
-    <button @click="nextSlide">Next</button>
+    <div class="navigation">
+      <button class="prev btn" @click="prevSlide">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="next btn" @click="nextSlide">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+    </div>
+    
   </div>
 </template>
 
@@ -52,15 +59,14 @@ export default {
         this.currentSlideIndex++;
       }
     },
-    
   },
   watch: {},
   mounted() {
-    if(this.interval >0){
+    if (this.interval > 0) {
       let vm = this;
-      setInterval(function(){
-        vm.nextSlide()
-      }, vm.interval)
+      setInterval(function () {
+        vm.nextSlide();
+      }, vm.interval);
     }
   },
 };
@@ -69,7 +75,8 @@ export default {
 <style lang="scss">
 @import "/src/assets/styles/style.scss";
 .v-carousel {
-  max-width: 80rem;
+  position: relative;
+  width: 81.2rem;
   overflow: hidden;
   border-radius: 2rem;
   margin: 0 auto;
@@ -77,5 +84,23 @@ export default {
     display: flex;
     transition: all ease 0.5s;
   }
+  .navigation{
+    position: absolute;
+    bottom: 30px;
+    left: 45.5%;
+    display: flex;
+    gap: 5rem;
+    .btn{
+    background-color: transparent;
+    cursor: pointer;
+  
+  }
+  .fa-chevron-left,
+.fa-chevron-right {
+  color: white; 
+  font-size: 24px; 
+}
+  }
+  
 }
 </style>

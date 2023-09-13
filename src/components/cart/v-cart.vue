@@ -11,7 +11,7 @@
     />
     <div class="v-cart__total">
       <p class="total_name">Total:</p>
-      <p>{{ cartTotalCost }}</p>
+      <p>{{ cartTotalCost }}$</p>
     </div>
   </div>
 </template>

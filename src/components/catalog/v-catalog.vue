@@ -48,11 +48,23 @@ export default {
 </script>
 
 <style lang="scss">
+@import "/src/assets/styles/style.scss";
 .v-catalog {
+  padding-top: 5rem;
+  h3{
+    font-family: var(--font-family);
+    font-size: 33px;
+font-style: normal;
+font-weight: 500;
+line-height: 43px; 
+color: $first-color;
+text-align: left;
+  }
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5rem 3rem;
+    padding: 2.5rem 0;
   }
 }
 </style>
